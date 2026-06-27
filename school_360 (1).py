@@ -568,7 +568,7 @@ Instructions:
 """)
 
 st.image(
-    "/content/ishihara_plate.ppm", # Corrected filename based on previous upload output
+    "/ishihara_plate.ppm", # Corrected filename based on previous upload output
     width=600
 )
 
