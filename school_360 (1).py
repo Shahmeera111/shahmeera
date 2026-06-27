@@ -8,7 +8,6 @@ Original file is located at
 """
 
 import sys
-!{sys.executable} -m pip install streamlit
 import streamlit as st
 import matplotlib.pyplot as plt
 
@@ -814,7 +813,7 @@ skin_status = st.selectbox(
         "Healthy Skin",
         "Rash Present",
         "Redness Present",
-        "Dryness Present"
+        "Dryness Present",
         "Watery/Bloody Skin Discharge Present",
         "Wound/Ulcer/Blisters Present",
         "Pale/Yellowish in general apperance"]
@@ -1374,7 +1373,7 @@ if st.session_state.get("color_vision_completed"):
     ).lower():
 
         referrals.append(
-            """"
+            """
 Possible color vision deficiency detected.
 
 Referral for formal ophthalmologic assessment is recommended.
@@ -1443,7 +1442,7 @@ Unclassified or significant nail abnormality detected.
 Further clinical assessment is recommended.
 """
 
-     )
+        )
 
 if referrals:
 
