@@ -548,7 +548,7 @@ Referral to an ophthalmologist or optometrist is recommended for further evaluat
 from PIL import Image
 import streamlit as st
 
-image_path = "ishihara.ppm.png"
+image_path = "ishihara_plate.ppm"
 
 st.image(
     image_path,
