@@ -8,7 +8,7 @@ Original file is located at
 """
 
 import sys
-!{sys.executable} -m pip install streamlit
+
 import streamlit as st
 import matplotlib.pyplot as plt
 
