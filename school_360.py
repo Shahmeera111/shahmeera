@@ -1087,7 +1087,7 @@ for module, status in dashboard.items():
     st.write(f"{status}  {module}")
 
 import sys
-!{sys.executable} -m pip install streamlit
+
 import streamlit as st
 st.header("Overall Health Status")
 
