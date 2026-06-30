@@ -1938,13 +1938,11 @@ else:
     st.warning(
         "No student record found. Please click 'Save Student Record' first."
     )
+    with open("student_records.csv", "rb") as f:
+    record_csv = f.read()
     st.download_button(
-
-    label="student_records.csv",
-
+    "Download Student Records",
     data=record_csv,
-
     file_name="student_records.csv",
-
-    mime="csv"
-    )
+    mime="text/csv"
+)
