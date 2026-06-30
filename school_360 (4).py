@@ -1938,10 +1938,12 @@ else:
     st.warning(
         "No student record found. Please click 'Save Student Record' first."
     )
+import os
+if os.path.exists("student_records.csv"):
     with open("student_records.csv", "rb") as f:
-    record_csv = f.read()
+        record_csv = f.read()
     st.download_button(
-    "Download Student Records",
+         "Download Student Records",
     data=record_csv,
     file_name="student_records.csv",
     mime="text/csv"
