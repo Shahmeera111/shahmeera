@@ -32,6 +32,12 @@ age_years = st.number_input(
     max_value=19,
     step=1
 )
+age_months = st.selectbox(
+    "Additional Months",
+    options=list(range(12)),
+    index=0,
+    help="Select completed additional months (0–11)."
+)
 gender = st.selectbox(
     "Gender",
     ["Male", "Female"]
@@ -70,6 +76,7 @@ st.session_state["student_id"] = student_id
 st.session_state["teacher_id"] = teacher_id
 st.session_state["student_name"] = student_name
 st.session_state["age_years"] = age_years
+st.session_state["age_months"] = age_months
 st.session_state["gender"] = gender
 st.session_state["grade"] = grade
 st.session_state["section"] = section
@@ -273,24 +280,11 @@ girls_ref=pd.read_csv("ref_girls.csv")
 
 st.subheader("BMI Assessment")
 
-age_years = st.number_input(
-    "Age (Years)",
-    min_value=5,
-    max_value=19,
-    step=1
-)
-age_months = st.selectbox(
-    "Additional Months",
-    options=list(range(12)),
-    index=0,
-    help="Select completed additional months (0–11)."
-)
+
+
 age_in_months = age_years * 12 + age_months
 
-gender = st.selectbox(
-    "Gender",
-    ["Male", "Female"]
-)
+
 
 height_cm = st.number_input(
     "Height (cm)",
