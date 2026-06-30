@@ -71,6 +71,9 @@ assessment_date = st.date_input(
     "Assessment Date",
     value=date.today()
 )
+school_name = st.text_input(
+    "School Name"
+)
 
 st.session_state["student_id"] = student_id
 st.session_state["teacher_id"] = teacher_id
@@ -81,6 +84,7 @@ st.session_state["gender"] = gender
 st.session_state["grade"] = grade
 st.session_state["section"] = section
 st.session_state["assessment_date"] = assessment_date
+st.session_state["school_name"] = school_name
 
 """FUNCTIONS"""
 
@@ -1482,6 +1486,7 @@ Grade: {st.session_state.get("grade", "Not Available")}
 Section: {st.session_state.get("section", "Not Available")}
 Teacher ID: {st.session_state.get("teacher_id", "Not Available")}
 Assessment Date: {st.session_state.get("assessment_date", "Not Available")}
+School Name: {st.session_state.get("school_name", "Not Available")}
 TRAFFIC LIGHT SUMMARY
 
 {chr(10).join(traffic_light_text)}
@@ -1933,3 +1938,12 @@ else:
     st.warning(
         "No student record found. Please click 'Save Student Record' first."
     )
+    st.download_button(
+
+    label="student_records.csv",
+
+    data=record_csv,
+
+    file_name="student_records.csv",
+
+    mime="csv"
