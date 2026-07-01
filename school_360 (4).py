@@ -1072,14 +1072,14 @@ def traffic_light(result):
         "poor",
     ]
 
-        if any(result == word.casefold() for word in green_words):
-            return "🟢"
+    if any(result == word.casefold() for word in green_words):
+        return "🟢"
 
-        elif any(result == word.casefold() for word in yellow_words):
-            return "🟡"
+    elif any(result == word.casefold() for word in yellow_words):
+        return "🟡"
 
-        elif any(result == word.casefold() for word in red_words):
-            return "🔴"
+    elif any(result == word.casefold() for word in red_words):
+        return "🔴"
 bp = st.session_state.get("bp_result")
 
 
