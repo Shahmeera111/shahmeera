@@ -1083,7 +1083,11 @@ def traffic_light(result):
 
     return "⚪"
 
+bp = st.session_state.get("bp_result")
 
+st.write("DEBUG BP:", repr(bp))
+st.write("Contains abnormal?", "abnormal" in str(bp).casefold())
+st.write("Traffic:", traffic_light(bp))
 
 dashboard = {
 
