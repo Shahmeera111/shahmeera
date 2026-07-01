@@ -1084,13 +1084,14 @@ def traffic_light(result):
     return "⚪"
 
 
+
 dashboard = {
 
     "BMI": traffic_light(
         st.session_state.get("bmi_result")
     ),
 
-    "Blood Pressure": traffic_light(
+    "BP": traffic_light(
         st.session_state.get("bp_result")
     ),
 
