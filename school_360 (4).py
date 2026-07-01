@@ -1063,7 +1063,7 @@ def traffic_light(result):
 
     red_words = [
         "abnormal",
-        "high risk",
+        "high risk, further evaluation needed",
         "underweight",
         "under weight",
         "obese",
