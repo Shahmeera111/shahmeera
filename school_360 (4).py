@@ -193,7 +193,8 @@ if st.button("Calculate Result"):
     elif category == "Medium Risk":
         recommendation = "Monitor emotional wellbeing and seek support if needed."
 
-    else:
+    else: 
+        category == "High Risk"
         recommendation = "Professional counselling referral is recommended."
 
     st.write(recommendation)
@@ -414,7 +415,7 @@ sbp = st.number_input(
 
 dbp = st.number_input(
     "Diastolic Blood Pressure (mmHg)",
-    min_value=30,
+    min_value=50,
     max_value=150,
     step=1
 )
@@ -455,7 +456,7 @@ def bp_screening(age_years, gender, sbp, dbp):
 
     if age_years >= 13:
 
-        if sbp < 120 and dbp < 80:
+        if sbp < 121 and dbp < 81:
             return "Normal"
         return "Abnormal"
   # <13 years
