@@ -1907,6 +1907,10 @@ if st.button("Save Student Record"):
 # =========================
 
 file_name = "student_records.csv"
+# DEBUG
+if os.path.exists(file_name):
+    df = pd.read_csv(file_name)
+    st.write(df.columns.tolist())
 
 # Retrieve record from session state
 record_to_save = st.session_state.get("record_to_save")
