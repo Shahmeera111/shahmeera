@@ -1072,22 +1072,17 @@ def traffic_light(result):
         "poor",
     ]
 
-    if any(word.casefold() in result for word in green_words):
-        return "🟢"
+        if any(result == word.casefold() for word in green_words):
+            return "🟢"
 
-    elif any(word.casefold() in result for word in yellow_words):
-        return "🟡"
+        elif any(result == word.casefold() for word in yellow_words):
+            return "🟡"
 
-    elif any(word.casefold() in result for word in red_words):
-        return "🔴"
-
-    return "⚪"
-
+        elif any(result == word.casefold() for word in red_words):
+            return "🔴"
 bp = st.session_state.get("bp_result")
 
-st.write("DEBUG BP:", repr(bp))
-st.write("Contains abnormal?", "abnormal" in str(bp).casefold())
-st.write("Traffic:", traffic_light(bp))
+
 
 dashboard = {
 
