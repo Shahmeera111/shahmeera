@@ -13,7 +13,13 @@ import sys
 import streamlit as st
 import matplotlib.pyplot as plt
 
-st.set_page_config(page_title="School_360_App")
+st.set_page_config(
+    page_title="School 360",
+    page_icon="🏫",
+    layout="wide"
+)
+st.title("🏫 School 360 App")
+st.write("TITLE TEST")
 
 from datetime import date
 
@@ -1811,6 +1817,8 @@ if st.button("Save Student Record"):
 
     "Teacher_ID":
     st.session_state.get("teacher_id"),
+    "School Name":
+    st.session_state.get("school_name"),
 
     "Assessment_Date":
     st.session_state.get("assessment_date"),
